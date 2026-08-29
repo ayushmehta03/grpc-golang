@@ -24,3 +24,16 @@ message HelloResponse {
     string message =1; 
   
 }
+
+message  HelloRequest {
+    string name=1;
+  
+}
+
+
+message NamesList{
+    repeated string names=1;
+}
+message MessageList{
+    repeated string messages=1;
+}
