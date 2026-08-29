@@ -5,6 +5,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
+	pb "github.com/ayushmehta03/grpc-golang/proto"
 )
 
 
@@ -12,6 +13,11 @@ const(
 	port=":8080"
 )
 
+
+type helloServer struct{
+	pb.GreetServiceServer
+
+}
 func main(){
 	lis,err:=net.Listen("tcp",port)
 
