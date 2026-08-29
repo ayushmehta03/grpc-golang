@@ -10,9 +10,12 @@ service greetService {
 
   rpc sayHello(NoParam) returns (HelloResponse);
 
-  rpc SayHelloServerStreaming(NamesList) returns (Stream HelloResponse)
+  rpc SayHelloServerStreaming(NamesList) returns (stream HelloResponse);
 
-  
+  rpc sayHelloClientStreaming(stream HelloRequest) returns(MessageList);
+
+  rpc SayHelloBiDirectional(stream HelloRequest) returns (stream HelloResponse);
+
 }
 
 message NoParam{};
