@@ -30,6 +30,6 @@ client:=pb.NewGreetServiceClient(conn)
 		Names:[]string{"am","ad","ayra","kamyar"},
 }
 
-	callSayHello(client)
+//	callSayHello(client)
 	callSayHelloServerStream(client,names)
 }
