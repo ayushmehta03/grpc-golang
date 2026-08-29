@@ -8,8 +8,8 @@ import (
 
 //unary api-> single req and response model
 
-func (s *helloServer)sayHello(ctx context.Context, req *pb.NoParam)(*pb.HelloResponse,error){
+func (s *helloServer) SayHello(ctx context.Context, req *pb.NoParam) (*pb.HelloResponse, error) {
 	return &pb.HelloResponse{
-		Message: "hey",
-	},nil
+		Message: "Hello",
+	}, nil
 }

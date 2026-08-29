@@ -13,11 +13,11 @@ const(
 	port=":8080"
 )
 
-
-type helloServer struct{
+type helloServer struct {
 	pb.GreetServiceServer
-
 }
+
+
 func main(){
 	lis,err:=net.Listen("tcp",port)
 
